@@ -1,0 +1,398 @@
+{
+	"info": {
+		"_postman_id": "dca85ccb-192c-42ae-ae65-fd4f5f0fc30b",
+		"name": "Parcial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24011777"
+	},
+	"item": [
+		{
+			"name": "Airline",
+			"item": [
+				{
+					"name": "Guardar Aerolinea OK",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Avianca\",\r\n    \"description\" : \"Aerolinea internacional\",\r\n    \"createAt\" : \"1920-01-01\",\r\n    \"website\" : \"www.avianca.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/airlines",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"airlines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener todas las aerolineas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/airlines",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"airlines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener aerolinea por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/airlines/fefa60a8-d3b8-4f74-ba97-b4a5c3157928",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"airlines",
+								"fefa60a8-d3b8-4f74-ba97-b4a5c3157928"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener aerolinea por id No valido",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/airlines/fefa60a8-d3b8-4f74-ba97-b4a5c3157900",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"airlines",
+								"fefa60a8-d3b8-4f74-ba97-b4a5c3157900"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar aerolinea",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Nueva\",\r\n    \"description\" : \"Nueva Aerolinea internacional\",\r\n    \"createAt\" : \"1820-01-01\",\r\n    \"website\" : \"www.latam.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/airlines/fefa60a8-d3b8-4f74-ba97-b4a5c3157928",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"airlines",
+								"fefa60a8-d3b8-4f74-ba97-b4a5c3157928"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar aerolinea",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/airlines/f4f41018-80fb-412b-8651-74678d5287de",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"airlines",
+								"f4f41018-80fb-412b-8651-74678d5287de"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Airport",
+			"item": [
+				{
+					"name": "Crear nuevo aeropuerto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"El Dorado\",\r\n    \"descripcion\" :\"Aeropuerto \",\r\n    \"code\" : \"EDD\",\r\n    \"country\":\"Colombia\",\r\n    \"city\":\"Bogota\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/airports",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"airports"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener todos los aeropuertos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/airports",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"airports"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener un aeropuerto por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/airports/07a63488-9162-4c5f-8e46-525f488ae631",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"airports",
+								"07a63488-9162-4c5f-8e46-525f488ae631"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener aeropuerto ID no existente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/airports/07a63488-9162-4c5f-8e46-525f488ae000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"airports",
+								"07a63488-9162-4c5f-8e46-525f488ae000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar aeropuerto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Ernesto Cortissoz\",\r\n    \"descripcion\" :\"Aeropuerto de Barranquilla\",\r\n    \"code\" : \"BAQ\",\r\n    \"country\":\"Colombia\",\r\n    \"city\":\"Barranquilla\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/airports/07a63488-9162-4c5f-8e46-525f488ae631",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"airports",
+								"07a63488-9162-4c5f-8e46-525f488ae631"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar aeropuerto no existe",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Ernesto Cortissoz\",\r\n    \"descripcion\" :\"Aeropuerto de Barranquilla\",\r\n    \"code\" : \"BAQ\",\r\n    \"country\":\"Colombia\",\r\n    \"city\":\"Barranquilla\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/airports/07a63488-9162-4c5f-8e46-525f488ae000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"airports",
+								"07a63488-9162-4c5f-8e46-525f488ae000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar aeropuerto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/airports/7e3f7070-c873-4c11-bb81-b6bfc7bce6e3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"airports",
+								"7e3f7070-c873-4c11-bb81-b6bfc7bce6e3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AirLine-AirPort",
+			"item": [
+				{
+					"name": "Asociar aeropuerto con aerolinea",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/airlines/c918d2d3-0c59-418f-a542-c42d8c43772d/airports/7feaceba-99ef-4a00-9f3b-e46461270c61",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"airlines",
+								"c918d2d3-0c59-418f-a542-c42d8c43772d",
+								"airports",
+								"7feaceba-99ef-4a00-9f3b-e46461270c61"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener los aeropuertos asociados a una aerolinea",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/airlines/c918d2d3-0c59-418f-a542-c42d8c43772d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"airlines",
+								"c918d2d3-0c59-418f-a542-c42d8c43772d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
